@@ -18,7 +18,7 @@ const Cadastro = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    Api.post("/createUsers", data)
+    Api.post("/creatusers", data)
       .then((resp) => {
         if (!resp.data.error === true) {
           toast(resp.data.message);

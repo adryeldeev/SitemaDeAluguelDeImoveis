@@ -1,23 +1,22 @@
 import React from "react";
-import { Container, Logo, Menu } from "./styles";
+import { Button, Container, Logo, Menu } from "./styles";
 import logoIMG from "../../assets/img/logo.png";
-import { Link, useHistory } from "react-router-dom"; // Importe useHistory
+import { Link, useHistory } from "react-router-dom";
 
 const Header = () => {
   const userLogged = localStorage.getItem("Yt");
-  const history = useHistory(); // Inicialize useHistory
+  const history = useHistory();
 
   const handleLogout = () => {
-    localStorage.removeItem("Yt"); // Remova o usuário do localStorage
-    history.push("/login"); // Navegue para a rota de login usando useHistory
+    localStorage.removeItem("Yt");
+    history.push("/login");
   };
 
   return (
     <Container>
       <Logo>
         <Link to="/">
-          <img src={logoIMG} alt="Logo" />{" "}
-          {/* Adicione alt para acessibilidade */}
+          <img src={logoIMG} alt="Logo" />
         </Link>
       </Logo>
       <Menu>
@@ -28,8 +27,7 @@ const Header = () => {
             </li>
           ) : (
             <li>
-              <button onClick={handleLogout}>Sair</button>{" "}
-              {/* Alterado para um botão para melhor semântica */}
+              <Button onClick={handleLogout}>Sair</Button>
             </li>
           )}
         </ul>

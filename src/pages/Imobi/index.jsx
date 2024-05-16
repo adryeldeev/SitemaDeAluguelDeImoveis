@@ -16,9 +16,10 @@ import TopBanner from "../../components/TopBanner";
 import TextArea from "../../components/Textarea";
 import Button from "../../components/Button";
 import Input from "../../components/Input/Index";
-import Api, { urlApi } from "../../services/Api";
+
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { toast } from "react-toastify";
+import Api, { urlApi } from "../../services/Api";
 const Imobi = () => {
   const { slug } = useParams();
   const [dataimobi, setDataImobi] = useState([]);
@@ -103,19 +104,19 @@ const Imobi = () => {
                 type="hidden"
                 name="userId"
                 value={userId}
-                onChance={(e) => setClientName(e.target.value)}
+                onChance={(e) => setClientName((e.target.value = ""))}
               />
               <Input
                 type="text"
                 placeholder="Nome: "
                 name="client_name"
-                onChance={(e) => setClientName(e.target.value)}
+                onChance={(e) => setClientName((e.target.value = ""))}
               />
               <Input
                 type="text"
                 placeholder="E-mail: "
                 name="client_email"
-                onChance={(e) => setClientEmail(e.target.value)}
+                onChance={(e) => setClientEmail((e.target.value = ""))}
               />
               <TextArea
                 placeholder="Mensagem: "
@@ -123,7 +124,7 @@ const Imobi = () => {
                 cols="30"
                 rows="16"
                 name="client_mensagem"
-                onChance={(e) => setClientMensagem(e.target.value)}
+                onChance={(e) => setClientMensagem((e.target.value = ""))}
               />
 
               <Button>Enviar mensagem</Button>

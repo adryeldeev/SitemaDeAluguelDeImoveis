@@ -1,22 +1,23 @@
-import React, { Fragment, useEffect, useState } from "react";
-import { Header, Wrapper } from "./style";
+import React, { Fragment } from "react";
 import Card from "../../components/Card";
 import Banner from "../../components/Banner";
+
+import { useState } from "react";
+import { useEffect } from "react";
 import Api from "../../services/Api";
+import { Header, Wrapper } from "./style";
 
 const Home = () => {
   const [imobi, setImobi] = useState([]);
-
   useEffect(() => {
     Api.get("/listimobi")
-      .then((resp) => {
-        setImobi(resp.data);
+      .then((response) => {
+        setImobi(response.data);
       })
       .catch(() => {
-        console.log("Error");
+        console.log("Erro: Erro no sistema");
       });
   }, []);
-
   return (
     <Fragment>
       <Banner />

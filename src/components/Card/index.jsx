@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Container, Description, Img, Itens } from "./styles";
 
 import { FaMapMarkerAlt } from "react-icons/fa";
