@@ -7,6 +7,13 @@ display:flex;
 justify-content:center;
 align-items:center;
 flex-direction:column;
+@media (max-width: 375px){
+    padding:10px;
+   display:flex
+   flex-direction:column;
+  
+ }
+
 h2{
     font-size:1.875rem;
 }

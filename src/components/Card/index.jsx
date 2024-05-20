@@ -10,7 +10,7 @@ const Card = ({ thumb, tipo, endereco, valor, slug }) => {
   return (
     <Container>
       <Img>
-        <img src={`${urlApi}/uploads/${thumb}`} alt="" />
+        <img src={`${urlApi}/uploads/${thumb}`} />
       </Img>
       <Description>
         <h4>{tipo}</h4>

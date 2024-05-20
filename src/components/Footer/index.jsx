@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import logoIMG from "../../assets/img/logo.png";
-import { Container, Copy, Item } from "./style";
+import { Container, Copy, Item, Services } from "./style";
 import { FaFacebook, FaWhatsapp, FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
@@ -30,7 +30,7 @@ const Footer = () => {
             </li>
           </nav>
         </Item>
-        <Item>
+        <Services>
           <h3>Our Services</h3>
           <ul>
             <li>
@@ -43,8 +43,8 @@ const Footer = () => {
               <span>Vender</span>
             </li>
           </ul>
-        </Item>
-        <Item>
+        </Services>
+        <Services>
           <h3>Our Services</h3>
           <ul>
             <li>
@@ -57,8 +57,8 @@ const Footer = () => {
               <span>Vender</span>
             </li>
           </ul>
-        </Item>
-        <Item>
+        </Services>
+        <Services>
           <h3>Our Services</h3>
           <ul>
             <li>
@@ -71,7 +71,7 @@ const Footer = () => {
               <span>Vender</span>
             </li>
           </ul>
-        </Item>
+        </Services>
       </Container>
       <Copy>
         <p>Copyright 2022 - Workside Tecnologia All Rights Reserved.</p>

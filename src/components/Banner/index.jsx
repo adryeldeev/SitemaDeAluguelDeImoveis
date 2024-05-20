@@ -1,15 +1,21 @@
 import React from "react";
-import { Container, Text } from "./styles";
+import { Container, SubTexto, Text, TextoSpan, Titulo } from "./styles";
 
 const Banner = () => {
   return (
     <Container>
       <Text>
-        <h2>Discover The Beaty of Your Next Flat</h2>
-        <p>
-          Thousands of peoplo have theirchance to grab your own house today.
-        </p>
-        <span>Cadastre seu anúncio</span>
+        <Titulo>
+          <h2>Discover the Beaty of Your Next Flat</h2>
+        </Titulo>
+        <SubTexto>
+          <p>
+            Thousands of peoplo have theirchance to grab your own house today.
+          </p>
+        </SubTexto>
+        <TextoSpan>
+          <span>Cadastre seu anúncio</span>
+        </TextoSpan>
       </Text>
     </Container>
   );
