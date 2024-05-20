@@ -6,11 +6,11 @@ const Banner = () => {
     <Container>
       <Text>
         <Titulo>
-          <h2>Discover the Beaty of Your Next Flat</h2>
+          <h2>Descubra a beleza do seu próximo apartamento</h2>
         </Titulo>
         <SubTexto>
           <p>
-            Thousands of peoplo have theirchance to grab your own house today.
+          Milhares de pessoas têm a chance de adquirir sua própria casa hoje.
           </p>
         </SubTexto>
         <TextoSpan>

@@ -29,9 +29,10 @@ const Imobi = () => {
     const fetchData = async () => {
       try {
         const resp = await Api.get(`/listimobi/${slug}`);
+
         setDataImobi(resp.data);
       } catch (error) {
-        console.log("Error: Erro ao listar o imovel " + error);
+        console.log("Error: Erro ao listar o imóvel " + error);
       }
     };
 
@@ -63,17 +64,22 @@ const Imobi = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Dados do formulário:", dataMessage);
+
     if (client_name === "" || client_email === "" || client_mensagem === "") {
       alert("Preencha todos os campos.");
       return;
     }
     try {
       const resp = await Api.post("/createmessage", dataMessage);
+
       toast(resp.data.message);
     } catch (error) {
       console.log("Error no sistema");
     }
   };
+
+  const imageUrl = `${urlApi}/uploads/${thumb}`;
 
   return (
     <Fragment>
@@ -81,7 +87,7 @@ const Imobi = () => {
       <Container>
         <Left>
           <Thumb>
-            <img src={`${urlApi}/uploads/${thumb}`} alt="Imagem do Imóvel" />
+            <img src={imageUrl} alt="Imagem do Imóvel" />
           </Thumb>
           <Description>
             <h2>{tipo}</h2>
@@ -111,17 +117,19 @@ const Imobi = () => {
           <ProfileFormContact>
             <h3>Contate o anunciante</h3>
             <form onSubmit={handleSubmit} autoComplete="off">
-              <Input type="hidden" name="userId" value={userId} />
+              <Input type="hidden" name="userId" value={userId || ""} />
               <Input
                 type="text"
                 placeholder="Nome: "
                 name="client_name"
+                value={client_name}
                 onChange={(e) => setClientName(e.target.value)}
               />
               <Input
                 type="text"
                 placeholder="E-mail: "
                 name="client_email"
+                value={client_email}
                 onChange={(e) => setClientEmail(e.target.value)}
               />
               <TextArea
@@ -130,6 +138,7 @@ const Imobi = () => {
                 cols="30"
                 rows="16"
                 name="client_mensagem"
+                value={client_mensagem}
                 onChange={(e) => setClientMensagem(e.target.value)}
               />
               <Button>Enviar mensagem</Button>

@@ -24,7 +24,7 @@ background-position:center;
     padding:10px;
    display:flex
    flex-direction:column;
- }
+}
 
 
 :before{
@@ -38,10 +38,10 @@ background-position:center;
     z-index:1;
 }
 
-    `
+`
     
-    
-    export const Text = styled.div`
+
+export const Text = styled.div`
 width:55%;
 position:relative;
 z-index:1;
@@ -49,8 +49,7 @@ z-index:1;
     padding:0px;
    display:flex
    flex-direction:column;
-  
-  
+
  }
 h2{
     color:var(--white);

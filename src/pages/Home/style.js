@@ -35,16 +35,13 @@ display:flex;
 gap:20px;
 align-items:center;
 flex-wrap:wrap;
-padding:25px 150px ;
-@media (max-width: 576px) and (max-width:767px){
-  padding: 100px 150px;
+padding:25px 150px;
 
-}
 @media (max-width: 992px) and (max-width:1199.98px){
   padding:10px 50px; 
 }
 @media (max-width: 375px) {
     padding: 10px 50px;
-  }
+}
  
 `
