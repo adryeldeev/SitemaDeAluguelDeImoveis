@@ -16,7 +16,7 @@ const RouterApp = () => {
     <Router>
       <Header />
       <Switch>
-        <Route path="/" exact component={Home} />
+        <Route path="/SitemaDeAluguelDeImoveis" exact component={Home} />
         <Route path="/imovel/:slug" component={Imobi} />
         <Route path="/login" component={Login} />
         <Route path="/cadastro" component={Cadastro} />
